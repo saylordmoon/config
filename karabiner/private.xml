@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<root>
+	<item>
+	    <name>Print screen to /</name>
+	    <identifier>private.print_screen_to_slash</identifier>
+	    <autogen>__KeyToKey__ KeyCode::F13, KeyCode::SLASH</autogen>
+	</item>
+	<item>
+	    <name>Scroll to * </name>
+	    <identifier>private.scroll_to_asterix</identifier>
+	    <autogen>__KeyToKey__ KeyCode::PC_SCROLLLOCK, KeyCode::KEYPAD_MULTIPLY</autogen>
+	</item>
+	<item>
+	    <name>Pause to -</name>
+	    <identifier>private.pause_to_minus</identifier>
+	    <autogen>__KeyToKey__ KeyCode::PC_PAUSE, KeyCode::MINUS</autogen>
+	</item>
+	<item>
+	    <name>Enter to Return</name>
+	    <identifier>private.enter_to_return</identifier>
+	    <autogen>__KeyToKey__ KeyCode::ENTER, KeyCode::RETURN</autogen>
+	</item>
+</root>
