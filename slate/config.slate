@@ -1,0 +1,92 @@
+# HYPER KEY
+# -------------------------------------------------------------------
+# The "hyper" key is a shortcut for CTRL + ALT + CMD
+ 
+ alias hyper ctrl;alt;cmd
+
+
+# GLOBAL CONFIGURATIONS
+# -------------------------------------------------------------------
+# See https://github.com/jigish/slate/wiki/Global-Configs
+ 
+ config defaultToCurrentScreen true
+ config secondsBeforeRepeat 0.4
+ config secondsBetweenRepeat 0.1
+ config keyboardLayout "qwerty"
+ config nudgePercentOf screenSize
+ config resizePercentOf screenSize
+
+# Shows app icons and background apps, spreads icons in the same place.
+ config windowHintsShowIcons true
+ config windowHintsIgnoreHiddenWindows false
+ config windowHintsSpread true
+ config windowHintsIconAlpha 0.5
+
+
+# Better application switcher
+# bind tab:cmd switch
+  
+
+# Reload Slate configuration file
+  bind s:${hyper} relaunch
+
+
+#show grid
+ bind g:${hyper} grid padding:5 0:8,4
+
+
+# -------------------------------------------------------------------
+#Key bindings
+# -------------------------------------------------------------------
+
+#show windows opened with hints as letters
+ bind e:${hyper} hint ASDFGHJKLQWERTYUIOPCVBN
+
+
+
+# -------------------------------------------------------------------
+# MONITOR ALIASES
+# -------------------------------------------------------------------
+ 
+ alias screen 2560x1440 
+
+
+
+# GENERAL POSITION ALIASES AND BINDINGS
+# -------------------------------------------------------------------
+# These positions are not tied to any screen. Each position gets an 
+# alias and then a keybinding. The keybindings are all mapped to the 
+# numberpad, with each row grouping a denominator.
+ 
+# cmd+ctrl+alt 1 = fullscreen
+ alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
+ bind 1:${hyper} ${full}
+
+# cmd+ctrl+alt 2 = lefthalf
+ alias lefthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
+ bind 2:${hyper} ${lefthalf}
+ 
+# cmd+ctrl+alt 3 = righthalf quarter
+ alias righthalfq move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY/2
+ bind 3:${hyper} ${righthalfq}
+
+# cmd+ctrl+alt 0 = top-right-half-half
+ alias toprighthh move screenOriginX+0.625*screenSizeX;screenOriginY 0.375*screenSizeX;0.5*screenSizeY
+ bind 0:${hyper} ${toprighthh}
+
+# cmd+ctrl+alt 9 = left-center-quarter
+ alias centerleftQ move screenOriginX+0.5*screenSizeX;screenOriginY 0.25*screenSizeX;0.5*screenSizeY
+ bind 9:${hyper} ${centerleftQ}
+
+# cmd+ctrl+alt 4 = left-center-quarter-quarter
+ alias centerleftqq move screenOriginX+0.5*screenSizeX;screenOriginY+0.5*screenSizeY 0.125*screenSizeX;0.25*screenSizeY
+ bind 4:${hyper} ${centerleftqq}
+
+# Push 
+ bind right:ctrl;cmd  push right 
+ bind left:ctrl;cmd   push left  
+ bind up:ctrl;cmd     push up    
+ bind down:ctrl;cmd   push down  
+
+
+
